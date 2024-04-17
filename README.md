@@ -158,7 +158,7 @@ Project Link: [https://github.com/MSAugdal/jsBasicsKalkulator](https://github.co
 [issues-shield]: https://img.shields.io/github/issues/MSAugdal/jsBasicsKalkulator.svg?style=for-the-badge
 [issues-url]: https://github.com/MSAugdal/jsBasicsKalkulator/issues
 [license-shield]: https://img.shields.io/github/license/MSAugdal/jsBasicsKalkulator.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/jsBasicsKalkulator/blob/master/LICENSE.md
+[license-url]: https://github.com/MSAugdal/jsBasicsKalkulator/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
