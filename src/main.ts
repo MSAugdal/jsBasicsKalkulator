@@ -21,12 +21,12 @@ const handleCLick = (e: Event) => {
   const target: HTMLDivElement | null = <HTMLDivElement>e.target;
   if (target === null) return `Error: target of event "${e}" not found`;
 
-  if (symbols.includes(target.id) && evalString.length === 0) return;
-  if (symbols.includes(target.id) && symbols.includes(evalString[evalString.length - 1])) return;
+  if (symbols.indexOf(target.id) !== -1 && evalString.length === 0) return;
+  if (symbols.indexOf(target.id) !== -1 && symbols.indexOf(evalString[evalString.length - 1]) !== -1) return;
 
   if (target.id === '=') {
     if (evalString.length === 0) return;
-    if (symbols.includes(evalString[evalString.length - 1])) return;
+    if (symbols.indexOf(evalString[evalString.length - 1]) !== -1) return;
     evalString = [eval(evalString.join(''))];
     display!.innerHTML = evalString.join('');
   }
