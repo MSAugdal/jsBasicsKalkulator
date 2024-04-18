@@ -88,6 +88,7 @@ It calculates stuff you can do in your head.
 
 * ![Static Badge](https://img.shields.io/badge/TailwindCSS-000000?style=for-the-badge&logo=tailwindcss)
 * ![Static Badge](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript)
+* ![Static Badge](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript)
 * ![Static Badge](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5)
 * ![Static Badge](https://img.shields.io/badge/Vite-000000?style=for-the-badge&logo=vite)
 
