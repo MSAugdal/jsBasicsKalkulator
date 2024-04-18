@@ -130,7 +130,7 @@ To use this project locally, you need:
 <!-- LICENSE -->
 ## License
 
-Distributed under the no License.
+Distributed under the GLWTS License.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
