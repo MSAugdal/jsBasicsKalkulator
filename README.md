@@ -33,7 +33,7 @@
 <h3 align="center">JS Basics Kalkulator</h3>
 
   <p align="center">
-    Worlds most catching handleliste
+    Worlds most catching kalkulator
     <br />
     <a href="https://github.com/MSAugdal/jsBasicsKalkulator"><strong>Explore the docs »</strong></a>
     <br />
