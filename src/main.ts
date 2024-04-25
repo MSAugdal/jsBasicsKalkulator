@@ -25,6 +25,11 @@ enum Symbols {
 function handleCLick(e: Event): void {
   const target: HTMLDivElement | null = <HTMLDivElement>e.target;
   if (target === null) return console.log(`Error: target of event "${e}" not found`);
+  if (target.id == '.') {
+    const newEvalArr = evalArr.split(/[+,-,*,%]/);
+    if (newEvalArr[newEvalArr.length - 1].includes(".") == true) return;
+    evalArr.concat('.');
+  }
   if (target.id == '=') {
     evalArr = eval(evalArr).toString();
     display!.innerHTML = evalArr;
@@ -39,12 +44,10 @@ function handleCLick(e: Event): void {
   }
   else if (isNaN(+target.id)) {
     if (!isNaN(+evalArr[evalArr.length - 1])) {
-      console.log("sym");
       evalArr = evalArr.concat(target.id);
     }
   }
   else {
-    console.log("num");
     evalArr = evalArr.concat(target.id);
   }
   display!.innerHTML = evalArr;
@@ -57,14 +60,8 @@ buttons.forEach((value: string | number) => {
   let buttonElement: HTMLDivElement = document.createElement("div");
 
   if (value == '0') buttonElement.classList.add("col-span-2");
-
-  styling.forEach((style) => {
-    buttonElement.classList.add(style);
-  });
-
-  buttonElement.addEventListener('click', (e) => {
-    handleCLick(e);
-  });
+  buttonElement.classList.add(...styling);
+  buttonElement.addEventListener('click', handleCLick);
 
   buttonElement.id = <string>value;
   buttonElement.innerHTML = `${value}`;

@@ -18,6 +18,12 @@ function handleCLick(e) {
     var target = e.target;
     if (target === null)
         return console.log("Error: target of event \"".concat(e, "\" not found"));
+    if (target.id == '.') {
+        var newEvalArr = evalArr.split(/[+,-,*,%]/);
+        if (newEvalArr[newEvalArr.length - 1].includes(".") == true)
+            return;
+        evalArr.concat('.');
+    }
     if (target.id == '=') {
         evalArr = eval(evalArr).toString();
         display.innerHTML = evalArr;
@@ -31,12 +37,10 @@ function handleCLick(e) {
     }
     else if (isNaN(+target.id)) {
         if (!isNaN(+evalArr[evalArr.length - 1])) {
-            console.log("sym");
             evalArr = evalArr.concat(target.id);
         }
     }
     else {
-        console.log("num");
         evalArr = evalArr.concat(target.id);
     }
     display.innerHTML = evalArr;
@@ -44,15 +48,12 @@ function handleCLick(e) {
 }
 var styling = ["hover:scale-[1.02]", "hover:bg-orange-300", "w-[100%]", "h-[100%]", "rounded", "flex", "justify-center", "items-center", "bg-orange-400", "p-3", "m-auto"];
 buttons.forEach(function (value) {
+    var _a;
     var buttonElement = document.createElement("div");
     if (value == '0')
         buttonElement.classList.add("col-span-2");
-    styling.forEach(function (style) {
-        buttonElement.classList.add(style);
-    });
-    buttonElement.addEventListener('click', function (e) {
-        handleCLick(e);
-    });
+    (_a = buttonElement.classList).add.apply(_a, styling);
+    buttonElement.addEventListener('click', handleCLick);
     buttonElement.id = value;
     buttonElement.innerHTML = "".concat(value);
     calc_wrapper.appendChild(buttonElement);
